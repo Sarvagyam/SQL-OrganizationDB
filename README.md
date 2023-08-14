@@ -1,8 +1,8 @@
 # SQL-OrganizationDB
-This project shows the use of window functions and how they can be used for 
-the purpose of presenting data for better readability and analysis. 
-This database consists of two tables with employee details and department 
-details respectively. 
+
+This SQL analysis shows the usage of window functions for analyzing employee 
+dataset of an organization XYZ. This database has two tables- employee 
+details and department details.
 
 The questions for the query are as follows:
 
