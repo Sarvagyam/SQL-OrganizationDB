@@ -1,6 +1,6 @@
 Q1: Highest Salary of employees in each department with full names.
 
-select DeptName, CONCAT(EmpFName,' ',EmpLName) as Employee,
+select DeptName, CONCAT(EmpFName,' ',EmpLName) as Employee, <br/>
 max(Salary+Commission) as TotalSalary
 from employee
 JOIN department
