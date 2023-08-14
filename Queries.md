@@ -7,6 +7,8 @@ JOIN department
 ON (employee.DEPTCODE = department.DEPTCODE)
 group by DeptName;
 
+[Output](https://github.com/Sarvagyam/SQL-OrganizationDB/blob/main/Q1.png)
+
 
 
 Q2: Two highest entries of departments with hiredates.
@@ -18,6 +20,8 @@ select * from (
       from employee e JOIN department ON (e.DEPTCODE = department.DEPTCODE)
 ) x
 where x.reg <3;
+
+[Output](https://github.com/Sarvagyam/SQL-OrganizationDB/blob/main/Q2.png)
             
 
 
@@ -30,7 +34,7 @@ select * from (
                 from employee e JOIN department d ON e.DEPTCODE = d.DEPTCODE) x
 where x.rnk <3;
 
-                
+[Output](https://github.com/Sarvagyam/SQL-OrganizationDB/blob/main/Q3.png)
 
 Q4: Show Manager and employees under them and Total salary of each employee (salary + commission).
 
@@ -41,7 +45,7 @@ CONCAT(e.EmpFName,' ',e.EmpLName) as Employee,
 JOIN employee m ON e.Manager = m.EmpCode
 Order by m.EmpFName;
  
-
+[Output](https://github.com/Sarvagyam/SQL-OrganizationDB/blob/main/Q4.png)
 
 
 Q5: Details of SALESMAN hired between Jan,1980 to Dec,1990 in location MAIDSTONE.
@@ -52,7 +56,7 @@ JOIN department d ON (e.DEPTCODE = d.DEPTCODE)
 where e.HireDate BETWEEN '1980-01-01' AND '1990-12-31'
 AND Location IN ('MAIDSTONE') AND e.Job IN ('SALESMAN') ;
 
-
+[Output](https://github.com/Sarvagyam/SQL-OrganizationDB/blob/main/Q5.png)
 
 Q6: Details of employees hired with empcode 9554 in dept Marketing
 
@@ -61,6 +65,8 @@ use db;
 select * from employee  where Extract(Year from HireDate) IN
 (select EXTRACT(Year from HireDate) from employee
 where EmpCode IN (9591,9369)) AND EmpCode NOT IN (9591,9369);
+
+[Output](https://github.com/Sarvagyam/SQL-OrganizationDB/blob/main/Q6a.png)
  
 b.
 select e.* from employee e JOIN
@@ -69,7 +75,7 @@ where EXTRACT(Year from h.Hiredate)
 IN (select EXTRACT(Year from Hiredate) from employee where EmpCode IN (9591,9369)) 
 AND e.EmpCode NOT IN (9591,9369);
 
-
+[Output](https://github.com/Sarvagyam/SQL-OrganizationDB/blob/main/Q6b.png)
 
 Q7: Details of top 2 employees in each department with highest salaries(salary + commission) with descending order.
 
@@ -83,7 +89,7 @@ from employee e
 JOIN department d ON e.DEPTCODE = d.DEPTCODE) x
 where x.Ranks<3;
 
-
+[Output](https://github.com/Sarvagyam/SQL-OrganizationDB/blob/main/Q7.png)
 
 Q8: Minimum and maximum salary in each dept with details : employee name and empcode.
 
@@ -93,4 +99,5 @@ min(Salary) over(partition by DeptNAme) as MinSalary,
 max(Salary) over(partition by DeptName) as MaxSalary
 from employee e JOIN department d
 ON e.DEPTCODE = d.DEPTCODE;
- 
+
+[Output](https://github.com/Sarvagyam/SQL-OrganizationDB/blob/main/Q8.png)
