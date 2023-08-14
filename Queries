@@ -5,7 +5,7 @@ max(Salary+Commission) as TotalSalary
 from employee
 JOIN department
 ON (employee.DEPTCODE = department.DEPTCODE)
-group by DeptName
+group by DeptName;
 
 
 
