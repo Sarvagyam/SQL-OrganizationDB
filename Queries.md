@@ -7,7 +7,7 @@ JOIN department
 ON (employee.DEPTCODE = department.DEPTCODE)
 group by DeptName;
 ````
-<img src="[http://url/image.png](https://github.com/Sarvagyam/SQL-OrganizationDB/blob/main/Q1.png)" height="60" width="60" >
+<img src="[http://url/image.png](https://github.com/Sarvagyam/SQL-OrganizationDB/blob/main/Q1.png)" height="30px" width="120px" >
 
 
 
