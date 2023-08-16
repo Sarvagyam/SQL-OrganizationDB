@@ -1,4 +1,4 @@
-Q1: Highest Salary of employees in each department with full names.
+####Q1: Highest Salary of employees in each department with full names.
 ````sql
 select DeptName, CONCAT(EmpFName,' ',EmpLName) as Employee,
 max(Salary+Commission) as TotalSalary
@@ -12,7 +12,7 @@ group by DeptName;
 
 
 
-Q2: Two highest entries of departments with hiredates.
+####Q2: Two highest entries of departments with hiredates.
 ````sql
 select * from (
       select row_number() over(
@@ -26,7 +26,7 @@ where x.reg <3;
             
 
 
-Q3: First two highest salaries of employees in each department.
+####Q3: First two highest salaries of employees in each department.
 ````sql
 select * from (
                 select EmpCode,EmpFName,EmpLName,Job,(Salary+Commission),DeptName,
@@ -37,7 +37,7 @@ where x.rnk <3;
 ````
 <img src="https://github.com/Sarvagyam/SQL-OrganizationDB/blob/main/Q3.png" height="10%" width="90%" >
 
-Q4: Show Manager and employees under them and Total salary of each employee (salary + commission).
+####Q4: Show Manager and employees under them and Total salary of each employee (salary + commission).
 ````sql
 use db;
 select CONCAT(m.EmpFName,' ',m.EmpLName) as Manager, 
@@ -48,7 +48,7 @@ Order by m.EmpFName;
 ````
 <img src="https://github.com/Sarvagyam/SQL-OrganizationDB/blob/main/Q4.png" height="10%" width="90%" >
 
-Q5: Details of SALESMAN hired between Jan,1980 to Dec,1990 in location MAIDSTONE.
+####Q5: Details of SALESMAN hired between Jan,1980 to Dec,1990 in location MAIDSTONE.
 ````sql
 use db;<br />
 select e.*,d.DeptName,d.Location from employee e<br />
@@ -58,7 +58,7 @@ AND Location IN ('MAIDSTONE') AND e.Job IN ('SALESMAN') ;<br />
 ````
 <img src="https://github.com/Sarvagyam/SQL-OrganizationDB/blob/main/Q5.png" height="10%" width="90%" >
 
-Q6: Details of employees hired with empcode 9554 in dept Marketing
+####Q6: Details of employees hired with empcode 9554 in dept Marketing
 
 a.
 ````sql
@@ -79,7 +79,7 @@ AND e.EmpCode NOT IN (9591,9369);
 ````
 <img src="https://github.com/Sarvagyam/SQL-OrganizationDB/blob/main/Q6b.png" height="10%" width="90%" >
 
-Q7: Details of top 2 employees in each department with highest salaries(salary + commission) with descending order.
+####Q7: Details of top 2 employees in each department with highest salaries(salary + commission) with descending order.
 ````sql
 use db;
 select * from  (select d.DeptName,(e.Salary+e.Commission) as TotalSalary,
@@ -93,7 +93,7 @@ where x.Ranks<3;
 ````
 <img src="https://github.com/Sarvagyam/SQL-OrganizationDB/blob/main/Q7.png" height="10%" width="90%" >
 
-Q8: Minimum and maximum salary in each dept with details : employee name and empcode.
+####Q8: Minimum and maximum salary in each dept with details : employee name and empcode.
 ````sql
 use db;
 select EmpCode,DeptName,CONCAT(EmpFName,' ',EmpLName) as EmployeeName,
