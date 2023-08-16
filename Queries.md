@@ -1,12 +1,12 @@
 Q1: Highest Salary of employees in each department with full names.
-
+````sql
 select DeptName, CONCAT(EmpFName,' ',EmpLName) as Employee, <br />
 max(Salary+Commission) as TotalSalary<br />
 from employee<br />
 JOIN department<br />
 ON (employee.DEPTCODE = department.DEPTCODE)<br />
 group by DeptName;<br />
-
+````
 [Output](https://github.com/Sarvagyam/SQL-OrganizationDB/blob/main/Q1.png)
 
 
