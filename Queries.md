@@ -8,7 +8,7 @@ ON (employee.DEPTCODE = department.DEPTCODE)
 group by DeptName;
 ````
 
-<img src="https://github.com/Sarvagyam/SQL-OrganizationDB/blob/main/Q1.png" height="40" width="120" >
+<img src="https://github.com/Sarvagyam/SQL-OrganizationDB/blob/main/Q1.png" height="30%" width="30%" >
 
 
 
