@@ -7,7 +7,7 @@ JOIN department
 ON (employee.DEPTCODE = department.DEPTCODE)
 group by DeptName;
 ````
-[Output](https://github.com/Sarvagyam/SQL-OrganizationDB/blob/main/Q1.png)
+![Output](https://github.com/Sarvagyam/SQL-OrganizationDB/blob/main/Q1.png)
 
 
 
